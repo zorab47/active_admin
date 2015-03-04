@@ -41,7 +41,7 @@ module ActiveAdmin
           .map(&:foreign_type).include? method.to_s
       end
 
-      def searchable_through_association?(method = method)
+      def searchable_through_association?(method = method())
         ref = reflection_for(method)
         ref.options[:through] && ref.through_reflection.klass.ransackable_attributes.include?(ref.foreign_key) if ref
       end
