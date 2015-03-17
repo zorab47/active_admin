@@ -13,7 +13,7 @@ window.ActiveAdmin.Popover = class ActiveAdmin.Popover
       onClickActionItemCallback: null
     }
 
-    @options = $.extend({}, defaults, options)
+    @options = $.extend({}, defaults, @options)
 
     @$popover = null
     @isOpen = false
